@@ -4,6 +4,8 @@ Artemis
 Artemis is a comprehensive cheat software project comprising two main components: Artemis-Loader and Artemis-UI. Originally developed for Windows using WinForms, it includes features designed for gaming cheats, user authentication, and an interactive menu interface.
 Features
 Artemis-Loader
+![Example Image](resources/loader.PNG)
+
 
     User Authentication:
         Login interface for users to authenticate and access cheat functionalities.
@@ -15,7 +17,10 @@ Artemis-Loader
     Game Selection and Loading:
         Allows users to select a game and version to load the cheat.
 
+![Example Image](resources/loginsession.png)
+
 Artemis-UI (Cheat Menu)
+![Example Image](resources/ui.PNG)
 
     User Interface:
         Features tabbed navigation, sub-tabs, checkboxes, dropdowns, sliders (int and float), and color previewers.
