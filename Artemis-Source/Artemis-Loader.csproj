@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C7D8EF17-0BEC-47D2-AFFE-5398C538DCC9}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Artemis_Loader</RootNamespace>
+    <AssemblyName>Artemis-Loader</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DbConn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DbConn.Designer.cs">
+      <DependentUpon>DbConn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Loader.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Loader.Designer.cs">
+      <DependentUpon>Loader.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\LoginControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\LoginControl.Designer.cs">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Skeet Controls\SkeetButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Skeet Controls\SkeetComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Skeet Controls\SkeetGroupBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Skeet Controls\SkeetSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Skeet Controls\SkeetSlider.Designer.cs" />
+    <Compile Include="Skeet Controls\SkeetSlider1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SkeetSlider.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Skeet Controls\SkeetToggle.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Controls\VSSelect.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\VSSelect.Designer.cs">
+      <DependentUpon>VSSelect.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VSS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VSS.Designer.cs">
+      <DependentUpon>VSS.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="DbConn.resx">
+      <DependentUpon>DbConn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Loader.resx">
+      <DependentUpon>Loader.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\LoginControl.resx">
+      <DependentUpon>LoginControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Skeet Controls\SkeetSlider.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>SkeetSlider1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\VSSelect.resx">
+      <DependentUpon>VSSelect.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VSS.resx">
+      <DependentUpon>VSS.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Artemis\Artemis.csproj">
+      <Project>{5d2317ff-b1b9-4798-9556-6c12f8385d14}</Project>
+      <Name>Artemis</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
